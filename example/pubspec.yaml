@@ -12,9 +12,7 @@ dependencies:
     sdk: flutter
 
   zebra_rfid_sdk_plugin:
-
     path: ../
-
   cupertino_icons: ^1.0.6
 
 dev_dependencies:
