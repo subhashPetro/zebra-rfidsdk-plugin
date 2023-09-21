@@ -38,6 +38,7 @@ import java.util.function.Function;
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodChannel.Result;
 
+@SuppressWarnings({"deprecation", "unchecked"})
 public class RFIDHandler implements Readers.RFIDReaderEventHandler {
     private String TAG = "RFIDHandler";
     Context context;
