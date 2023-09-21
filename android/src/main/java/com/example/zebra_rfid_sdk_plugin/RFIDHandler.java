@@ -82,7 +82,7 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
             readers = new Readers(context,ENUM_TRANSPORT.ALL);
             //readers = new Readers(context, ENUM_TRANSPORT.SERVICE_SERIAL);
         }
-        AutoConnectDevice(result);
+        AutoConnectDevice(result,hostName);
     }
 
     public void dispose() {
@@ -103,7 +103,7 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
 
 
     @SuppressLint("StaticFieldLeak")
-    public void AutoConnectDevice(final Result result) {
+    public void AutoConnectDevice(final Result result,final String hostName) {
         AutoConnectDeviceTask = new AsyncTask<Void, Void, String>() {
             @Override
             protected String doInBackground(Void... voids) {
