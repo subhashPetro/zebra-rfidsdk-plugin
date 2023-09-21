@@ -54,8 +54,8 @@ public class ZebraRfidSdkPlugin implements FlutterPlugin, MethodCallHandler, Str
         Toast.makeText(context, txt, Toast.LENGTH_LONG).show();
         break;
       case "connect":
-        // boolean  isBluetooth=call.argument("isBluetooth");
-        rfidHandler.connect(result);
+        String hostName = call.argument("hostName");
+        rfidHandler.connect(result,hostName);
         break;
       case "getReadersList":
         rfidHandler.getReadersList();

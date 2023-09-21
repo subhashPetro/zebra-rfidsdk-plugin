@@ -77,7 +77,7 @@ class _RfidReaderScreenState extends State<RfidReaderScreen> {
                 });
               },
             ));
-            ZebraRfidSdkPlugin.connect();
+            ZebraRfidSdkPlugin.connect(hostName: "");
           },
           child: Text("start".toUpperCase()),
         ),

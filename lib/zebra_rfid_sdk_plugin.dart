@@ -30,21 +30,25 @@ class ZebraRfidSdkPlugin {
   }
 
   ///connect device
-  static Future<dynamic> connect() async {
-    try {
-      await _addEventChannelHandler();
-      var result = await _channel.invokeMethod('connect');
-      return result;
-    } catch (e) {
-      if (kDebugMode) {
-        print("Exception on connect device");
-      }
-      return {
-        "error": e,
-        "message": "Error on connect device",
-      };
+  static Future<dynamic> connect({required String hostName}) async {
+  try {
+    await _addEventChannelHandler();
+    var result = await _channel.invokeMethod(
+      'connect', 
+      {"hostName": hostName},
+    );
+    return result;
+  } catch (e) {
+    if (kDebugMode) {
+      print("Exception on connect device");
     }
+    return {
+      "error": e,
+      "message": "Error on connect device",
+    };
   }
+}
+
 
   ///disconnect device
   static Future<dynamic> disconnect() async {

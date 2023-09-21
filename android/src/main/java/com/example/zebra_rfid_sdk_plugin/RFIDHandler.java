@@ -76,7 +76,7 @@ public class RFIDHandler implements Readers.RFIDReaderEventHandler {
     }
 
     @SuppressLint("StaticFieldLeak")
-    public void connect(final Result result) {
+    public void connect(final Result result,final String hostName) {
         Readers.attach(this);
         if (readers == null) {
             readers = new Readers(context,ENUM_TRANSPORT.ALL);
