@@ -20,7 +20,7 @@ class _RfidReaderScreenState extends State<RfidReaderScreen> {
   }
 
   Map<String?, RfidData> rfidDataMap = {};
-  ReaderConnectionStatus connectionStatus = ReaderConnectionStatus.UnConnection;
+  ReaderConnectionStatus connectionStatus = ReaderConnectionStatus.notConnected;
 
   addData(List<RfidData> dataList) async {
     for (var item in dataList) {

@@ -40,13 +40,12 @@ class ZebraEngineEventHandler {
 
 enum ReaderConnectionStatus {
   ///not connected
-  UnConnection,
-
+  notConnected,
   ///connection complete
-  ConnectionRealy,
+  connected,
 
   ///connection error
-  ConnectionError,
+  connectionError,
 }
 
 class RfidData {
