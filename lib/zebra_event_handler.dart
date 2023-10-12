@@ -23,6 +23,19 @@ class ZebraEngineEventHandler {
         for (var i = 0; i < rfidDatas.length; i++) {
           list.add(RfidData.fromMap(Map<String, dynamic>.from(rfidDatas[i])));
         }
+        /***
+         * tag data will be return into this format
+         * {
+              "data" : [
+                {
+                  "tagId": ""
+                },
+                {
+                  "tagId": ""
+                },
+              ],
+            }
+         */
         readRfidCallback.call(list);
         break;
       case 'Error':
