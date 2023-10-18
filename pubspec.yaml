@@ -23,5 +23,4 @@ flutter:
       android:
         package: com.example.zebra_rfid_sdk_plugin
         pluginClass: ZebraRfidSdkPlugin
-      ios:
-        pluginClass: ZebraRfidSdkPlugin
+      
